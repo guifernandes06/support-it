@@ -1,18 +1,20 @@
 # Support IT - Sistema de Helpdesk e Inventário
 
-O Support IT é uma aplicação web desenvolvida para a gestão integrada de infraestruturas tecnológicas. O sistema combina duas componentes fundamentais num único painel: o controlo rigoroso do stock e inventário informático do armazém e um sistema completo de tickets para suporte técnico (Helpdesk).
+O Support IT é uma aplicação web desenvolvida para a gestão integrada de infraestruturas tecnológicas. O projeto foi criado e implementado para uso interno de uma empresa durante o meu período de estágio profissional, servindo como ferramenta ativa para a otimização dos fluxos de trabalho da equipa de suporte técnico e administração de sistemas.
+
+A plataforma combina duas componentes fundamentais num único painel: o controlo rigoroso do stock e inventário informático do armazém e um sistema completo de gestão de incidentes (Helpdesk).
 
 ## Características e Funcionalidades
 
-*   **Autenticação Segura:** Área de login e registo de utilizadores para acesso restrito e seguro às ferramentas de gestão.
-*   **Gestão de Tickets (Helpdesk):** Fluxo completo de pedidos de assistência técnica organizado por três estados de triagem:
+*   **Autenticação Segura:** Área de login e registo de utilizadores para acesso restrito e seguro às ferramentas de gestão conforme o perfil do funcionário.
+*   **Gestão de Tickets (Helpdesk):** Fluxo completo de pedidos de assistência técnica organizado por três estados de triagem para controlo de produtividade:
     *   Pedidos por fazer
     *   Pedidos em andamento
     *   Pedidos concluídos
-*   **Histórico de Pedidos:** Registo centralizado de todos os tickets finalizados para auditoria e controlo de assistência.
-*   **Controlo de Inventário (Armazém):** Módulo dedicado ao registo, edição e controlo de stock de hardware, periféricos e componentes informáticos.
+*   **Histórico de Pedidos:** Registo centralizado de todos os tickets finalizados para auditoria e histórico de manutenção.
+*   **Controlo de Inventário (Armazém):** Módulo dedicado ao registo, edição e controlo de stock de hardware, periféricos e componentes informáticos da empresa.
 *   **Motor de Pesquisa:** Sistema integrado de filtragem e pesquisa para localização rápida de itens no armazém ou tickets de suporte.
-*   **Notificações por Email:** Integração com o PHPMailer para automatização de alertas de tickets e comunicações do sistema.
+*   **Notificações por Email:** Integração com o PHPMailer para automatização de alertas de tickets e comunicações automáticas do sistema.
 
 ## Tecnologias Utilizadas
 
@@ -24,9 +26,9 @@ O Support IT é uma aplicação web desenvolvida para a gestão integrada de inf
 
 ## Estrutura do Projeto
 
-*   `index.php` - Painel principal / Dashboard da aplicação.
-*   `armazem.php` e `inventario.php` - Interfaces de visualização e controlo do stock informático.
-*   `item.php` e `editar.php` - Páginas para detalhe, inserção e modificação de ativos de TI.
-*   `login.php`, `login_bd.php` e `register.php` - Módulos do sistema de autenticação.
-*   `database/projeto.sql` - Script de estrutura e configuração da base de dados MySQL.
-*   `vendor/` - Diretório de dependências gerido pelo Composer (inclui PHPMailer).
+*   index.php - Painel principal / Dashboard da aplicação.
+*   armazem.php e `inventario.php` - Interfaces de visualização e controlo do stock informático.
+*   item.php e `editar.php` - Páginas para detalhe, inserção e modificação de ativos de TI.
+*   login.php, `login_bd.php` e `register.php` - Módulos do sistema de autenticação.
+*   database/projeto.sql - Script de estrutura e configuração da base de dados MySQL.
+*   vendor/ - Diretório de dependências gerido pelo Composer (inclui PHPMailer).
