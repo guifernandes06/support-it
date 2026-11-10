@@ -1,0 +1,322 @@
+/* ESTILO GERAL */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+
+    background-image: url("imagens/fundo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* limpa o fluxo da página, para que as colunas não saiam do sítio */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Todas essas colunas devem estar a flutuar para a esquerda e ter um padding de 15px: */
+[class*="col-"] {
+    float:left;
+    padding: 15px;
+    border: 1px;
+}
+    
+[class*="col-"] {
+    width: 100%;
+}
+    
+/* ISTO AGORA VEM AQUI , PARA TABLETS. REPARE NO col-s- */
+@media only screen and (min-width: 600px) {
+
+.col-s-1 {width : 8.33%;}
+.col-s-2 {width : 16.66%;}
+.col-s-3 {width : 25% ;}
+.col-s-4 {width : 33.33%;}
+.col-s-5 {width : 41.66%;}
+.col-s-6 {width : 50%;}
+.col-s-7 {width : 58.33%;}
+.col-s-8 {width : 66.66%;}
+.col-s-9 {width : 75%;}
+.col-s-10 {width : 83.33%;}
+.col-s-11 {width : 91.66%;}
+.col-s-12 {width : 100%;}
+
+}
+
+/* PARA DESKTOP AGORA ENTRA ASSIM , COM LARGURA MíNIMA E NãO MÁXIMA */
+/*divisão em 12 colunas, com 8.33% cada*/
+@media only screen and (min-width: 768px) {
+
+.col-1 {width : 8.33%;}
+.col-2 {width : 16.66%;}
+.col-3 {width : 25% ;}
+.col-4 {width : 33.33%;}
+.col-5 {width : 41.66%;}
+.col-6 {width : 50%;}
+.col-7 {width : 58.33%;}
+.col-8 {width : 66.66%;}
+.col-9 {width : 75%;}
+.col-10 {width : 83.33%;}
+.col-11 {width : 91.66%;}
+.col-12 {width : 100%;}
+
+}
+
+/* FORMULARIO GERAL */
+form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* BOTAO SUBMETER */
+input[type="submit"] {
+    background-color: #222222;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+	background-color: #555;
+}
+
+/* HEAD E LOGO */
+.header {
+    padding: 20px;
+    background-color: #333; /* Changed to a darker background for contrast */
+    text-align: center;
+    color: white;
+    display: flex; /* Flexbox for better layout control */
+    justify-content: space-between; /* Space between logo and text */
+    align-items: center;
+}
+
+.header_logo img {
+    max-width: 120px;
+    margin: 0 5px;
+}
+
+.header_logo {
+    text-align: left;
+    height: auto;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    background-color: #555;
+}
+
+/* MENU RESPONSIVO */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column; /* Stack header items vertically on small screens */
+    }
+    
+    .menu ul {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+    
+    .menu li {
+        display: block;
+    }
+}
+
+
+/* INDEX.PHP */
+.formulario {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+h1, h3 {
+    color: #000000;
+}
+
+/* ESTILOS PARA TEXT, NUMBER CAMPOS */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+    font-size: 1.2em;
+}
+
+input[type="radio"] {
+    margin: 0 10px;
+}
+
+
+/* FAZER.PHP */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.column {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    flex: 1;
+}
+
+.column_search {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(33.33% - 40px); 
+}
+
+.column h2 {
+    background-color: #772925;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#search {
+    width: 50%;
+    margin: 5px 0;
+    font-size: 0.8em;
+}
+
+
+/* TABELAS FAZER, ARMAZEM */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table {
+    border: 2px solid #363636;
+}
+
+th, td {
+    border: 1px solid #ddd;  
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* TABELAS PESQUISA */
+.table_search {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 2px solid #363636;
+}
+
+
+/* ARMAZEM.PHP */
+.armazem {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.armazem_pdd {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(33% - 30px);
+    box-sizing: border-box;
+    flex-grow: 1;
+    font-size: 18px; /* Aumentar o tamanho da fonte */
+}
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-content h2 {
+    background-color: #772925;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* PESSOAL.PHP */
+.coluna_pessoal {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(33.33% - 40px); 
+}
+
+.table_pessoal {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 2px solid #363636;
+}
