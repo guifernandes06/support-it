@@ -276,15 +276,15 @@ if (isset($_POST['mudar_fazer']) && isset($_POST['id']) && $isAdmin) {
                     $mail->isSMTP();
                     $mail->Host = 'smtp-mail.outlook.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'sml.ticket@outlook.pt';
-                    $mail->Password = 'SMLticketIT#2024';
+                    $mail->Username = 'email';
+                    $mail->Password = '*****';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
 
                     // Destinatários
-                    $mail->setFrom('sml.ticket@outlook.pt', 'Support IT');
+                    $mail->setFrom('email', 'Support IT');
                     $mail->addAddress($email_destinatario);
-                    $mail->addReplyTo('sml.ticket@outlook.pt', 'Support IT');
+                    $mail->addReplyTo('email', 'Support IT');
 
                     // Conteúdo
                     $mail->isHTML(true);
@@ -402,15 +402,15 @@ if (isset($_POST['mudar_andamento']) && isset($_POST['id']) && isset($_POST['res
                     $mail->isSMTP();
                     $mail->Host = 'smtp-mail.outlook.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'sml.ticket@outlook.pt';
-                    $mail->Password = 'SMLticketIT#2024';
+                    $mail->Username = 'email';
+                    $mail->Password = '*****';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
 
                     // Destinatários
-                    $mail->setFrom('sml.ticket@outlook.pt', 'Support IT');
+                    $mail->setFrom('email', 'Support IT');
                     $mail->addAddress($email_destinatario);
-                    $mail->addReplyTo('sml.ticket@outlook.pt', 'Support IT');
+                    $mail->addReplyTo('email', 'Support IT');
 
                     // Conteúdo
                     $mail->isHTML(true);
@@ -545,15 +545,15 @@ _END;
                     $mail->isSMTP();
                     $mail->Host = 'smtp-mail.outlook.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'sml.ticket@outlook.pt';
-                    $mail->Password = 'SMLticketIT#2024';
+                    $mail->Username = 'email';
+                    $mail->Password = '*****';
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
 
                     // Destinatários
-                    $mail->setFrom('sml.ticket@outlook.pt', 'Support IT');
+                    $mail->setFrom('email', 'Support IT');
                     $mail->addAddress($email_destinatario);
-                    $mail->addReplyTo('sml.ticket@outlook.pt', 'Support IT');
+                    $mail->addReplyTo('email', 'Support IT');
 
                     // Conteúdo
                     $mail->isHTML(true);
