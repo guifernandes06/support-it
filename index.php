@@ -64,15 +64,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $mail->isSMTP();                       // Envia usando SMTP
                     $mail->Host       = 'smtp-mail.outlook.com';  // Define o servidor SMTP para enviar através de
                     $mail->SMTPAuth   = true;              // Habilita a autenticação SMTP
-                    $mail->Username   = 'sml.ticket@outlook.pt'; // Nome de usuário SMTP
-                    $mail->Password   = 'SMLticketIT#2024'; // Senha de aplicativo SMTP
+                    $mail->Username   = 'email'; // Nome de usuário SMTP
+                    $mail->Password   = '*****'; // Senha de aplicativo SMTP
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Habilita criptografia TLS com STARTTLS
                     $mail->Port       = 587;               // Porta TCP para conectar-se
 
                     // Destinatários
-                    $mail->setFrom('sml.ticket@outlook.pt', 'Support IT');
-                    $mail->addAddress('sml.ticket@outlook.pt'); // Adiciona o destinatário fixo
-                    $mail->addReplyTo('sml.ticket@outlook.pt', 'Support IT');
+                    $mail->setFrom('email', 'Support IT');
+                    $mail->addAddress('email'); // Adiciona o destinatário fixo
+                    $mail->addReplyTo('email', 'Support IT');
 
                     // Conteúdo
                     $mail->isHTML(true);                   // Define o formato do email como HTML
